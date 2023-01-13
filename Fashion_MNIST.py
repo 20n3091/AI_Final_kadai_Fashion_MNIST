@@ -8,10 +8,10 @@ import keras
 model = keras.models.load_model('models/fashion_model.h5')
 Indicator_mnist = pd.read_csv('Fashion_MNIST/Indicator_mnist.csv')
 
-st.title('Model weight:')
+st.title('モデルのweight:')
 st.image('Fashion_MNIST/fashion_model.png', channels="BGR")
 
-st.title('Model evaluation indicators:')
+st.title('モデル評価指標:')
 st.write('Accuracy')
 st.line_chart(Indicator_mnist[["acc", "val_acc"]])
 st.write('loss')
